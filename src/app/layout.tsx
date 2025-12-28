@@ -15,8 +15,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://promptpilot.tech"),
   title: "PromptPilot - Transform Simple Prompts Into Powerful AI Instructions",
   description: "The open-source browser extension that makes ChatGPT, Claude, and Gemini actually understand what you want—instantly.",
+  openGraph: {
+    title: "PromptPilot - Transform Simple Prompts Into Powerful AI Instructions",
+    description: "The open-source browser extension that makes ChatGPT, Claude, and Gemini actually understand what you want—instantly.",
+    url: "https://promptpilot.tech",
+    siteName: "PromptPilot",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

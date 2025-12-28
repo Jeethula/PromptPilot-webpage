@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { Github, Twitter, Sparkles } from "lucide-react";
+import Image from "next/image";
+import { Github, Twitter } from "lucide-react";
 
 export function Footer() {
   return (
@@ -9,15 +10,23 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-1 md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-linear-to-br from-purple-500 to-indigo-600 flex items-center justify-center text-white">
-                <Sparkles className="w-5 h-5 fill-white" />
+              <div className="relative w-8 h-8">
+                <Image 
+                  src="/logo.png" 
+                  alt="PromptPilot Logo" 
+                  fill 
+                  className="object-contain"
+                />
               </div>
               <span className="text-xl font-bold text-white">PromptPilot</span>
             </Link>
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Transform simple prompts into powerful AI instructions. Open source,
               privacy-first, and free forever.
             </p>
+            <div className="space-y-2 text-sm text-gray-400">
+              <p>Contact: <a href="mailto:jeeththenthar@gmail.com" className="text-purple-400 hover:text-white transition-colors">jeeththenthar@gmail.com</a></p>
+            </div>
           </div>
 
           <div>
@@ -36,37 +45,6 @@ export function Footer() {
               <li>
                 <Link href="/roadmap" className="hover:text-purple-400 transition-colors">
                   Roadmap
-                </Link>
-              </li>
-              <li>
-                <Link href="/pricing" className="hover:text-purple-400 transition-colors">
-                  Pricing (Free)
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-white font-semibold mb-4">Resources</h3>
-            <ul className="space-y-3 text-sm text-gray-400">
-              <li>
-                <Link href="/docs" className="hover:text-purple-400 transition-colors">
-                  Documentation
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="hover:text-purple-400 transition-colors">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="/community" className="hover:text-purple-400 transition-colors">
-                  Community
-                </Link>
-              </li>
-              <li>
-                <Link href="/help" className="hover:text-purple-400 transition-colors">
-                  Help Center
                 </Link>
               </li>
             </ul>
@@ -92,6 +70,22 @@ export function Footer() {
               </li>
             </ul>
           </div>
+          
+          <div>
+            <h3 className="text-white font-semibold mb-4">Connect</h3>
+            <ul className="space-y-3 text-sm text-gray-400">
+              <li>
+                <Link href="https://www.linkedin.com/in/jeethula/" target="_blank" className="hover:text-purple-400 transition-colors">
+                  LinkedIn
+                </Link>
+              </li>
+              <li>
+                <Link href="https://github.com/Jeethula/PromptPilot" target="_blank" className="hover:text-purple-400 transition-colors">
+                  GitHub
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
@@ -100,18 +94,11 @@ export function Footer() {
           </p>
           <div className="flex items-center gap-4">
             <Link
-              href="https://github.com/promptpilot"
+              href="https://github.com/Jeethula/PromptPilot"
               target="_blank"
               className="text-gray-400 hover:text-white transition-colors"
             >
               <Github className="w-5 h-5" />
-            </Link>
-            <Link
-              href="https://twitter.com/promptpilot"
-              target="_blank"
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              <Twitter className="w-5 h-5" />
             </Link>
           </div>
         </div>

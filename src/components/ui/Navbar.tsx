@@ -2,8 +2,9 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, Github, Sparkles } from "lucide-react";
+import { Menu, X, Github } from "lucide-react";
 import { Button } from "./Button";
 import { cn } from "@/lib/utils";
 
@@ -44,8 +45,13 @@ export function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 rounded-lg bg-linear-to-br from-purple-500 to-indigo-600 flex items-center justify-center text-white">
-              <Sparkles className="w-5 h-5 fill-white" />
+            <div className="relative w-8 h-8">
+              <Image 
+                src="/logo.png" 
+                alt="PromptPilot Logo" 
+                fill 
+                className="object-contain"
+              />
             </div>
             <span className="text-xl font-bold bg-clip-text text-transparent bg-linear-to-r from-white to-gray-400 group-hover:to-white transition-all">
               PromptPilot
@@ -71,7 +77,7 @@ export function Navbar() {
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center gap-4">
             <Link
-              href="https://github.com/promptpilot"
+              href="https://github.com/Jeethula/PromptPilot"
               target="_blank"
               className="text-gray-400 hover:text-white transition-colors"
             >
@@ -110,7 +116,7 @@ export function Navbar() {
             ))}
             <div className="h-px bg-white/10 my-2" />
             <Link
-              href="https://github.com/promptpilot"
+              href="https://github.com/Jeethula/PromptPilot"
               target="_blank"
               className="flex items-center gap-2 text-gray-300"
             >
