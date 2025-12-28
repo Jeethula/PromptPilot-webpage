@@ -28,6 +28,9 @@ export const metadata: Metadata = {
   referrer: "origin-when-cross-origin",
   creator: "Jeethu",
   publisher: "Jeethu",
+  verification: {
+    google: "UtDsQIYqpcgSIfW_N2MyIfE0DROQ5ATe7YxG7ibbkfw",
+  },
   robots: {
     index: true,
     follow: true,
