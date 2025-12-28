@@ -20,10 +20,21 @@ import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { Section } from "@/components/ui/Section";
 import { CodeBlock } from "@/components/ui/CodeBlock";
+import type { Metadata } from "next";
+import JsonLd from "@/components/seo/JsonLd";
+
+export const metadata: Metadata = {
+  title: "PromptPilot | Free AI Prompt Extension & Add-in",
+  description: "Download the PromptPilot Extension (Add-in) for Chrome. Fix your prompts instantly with Local AI. The best alternative to copy-pasting prompts.",
+  alternates: {
+    canonical: "https://promptpilot.tech",
+  },
+};
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-0">
+    <div className="flex flex-col">
+      <JsonLd />
       {/* 1. Hero Section */}
       <Section className="pt-20 pb-20">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">

@@ -1,6 +1,15 @@
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { CheckCircle2, Circle, Clock, Users, Layout, Zap } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Public Roadmap - Future of PromptPilot",
+  description: "See what's coming next for PromptPilot: Personalized Personas, Prompt Templates, History, and Collaboration features.",
+  alternates: {
+    canonical: "https://promptpilot.tech/roadmap",
+  },
+};
 
 export default function RoadmapPage() {
   return (

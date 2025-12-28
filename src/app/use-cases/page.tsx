@@ -1,6 +1,15 @@
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { Code, PenTool, GraduationCap, Briefcase, Lightbulb } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Use Cases - Who is PromptPilot For?",
+  description: "From developers debugging code to content creators overcoming writer's block. See how PromptPilot helps your specific workflow.",
+  alternates: {
+    canonical: "https://promptpilot.tech/use-cases",
+  },
+};
 
 export default function UseCasesPage() {
   const cases = [

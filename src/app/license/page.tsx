@@ -1,5 +1,14 @@
 import { Section } from "@/components/ui/Section";
 import { CodeBlock } from "@/components/ui/CodeBlock";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "MIT License - PromptPilot",
+  description: "PromptPilot is open source software licensed under the MIT License.",
+  alternates: {
+    canonical: "https://promptpilot.tech/license",
+  },
+};
 
 export default function LicensePage() {
   return (

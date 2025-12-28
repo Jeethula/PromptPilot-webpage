@@ -3,6 +3,15 @@ import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { ArrowRight, Lightbulb, Link as LinkIcon, Quote } from "lucide-react";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Why I Built PromptPilot - The Death of the Prompt Engineer",
+  description: "A personal story about the frustration with 'Prompt Engineering' and why we need atomic AI enhancement instead.",
+  alternates: {
+    canonical: "https://promptpilot.tech/story",
+  },
+};
 
 export default function StoryPage() {
   return (

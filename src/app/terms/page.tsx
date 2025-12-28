@@ -1,4 +1,13 @@
 import { Section } from "@/components/ui/Section";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms of Service - PromptPilot",
+  description: "Terms of Service for PromptPilot. Provided 'as is' under the MIT License.",
+  alternates: {
+    canonical: "https://promptpilot.tech/terms",
+  },
+};
 
 export default function TermsPage() {
   return (

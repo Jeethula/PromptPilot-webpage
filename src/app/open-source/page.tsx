@@ -2,6 +2,15 @@ import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Github, Heart, Shield, Code, Users } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Open Source & Security - PromptPilot",
+  description: "Our code is 100% open source on GitHub. Audit our privacy claims, contribute features, or fork the project. MIT Licensed.",
+  alternates: {
+    canonical: "https://promptpilot.tech/open-source",
+  },
+};
 
 export default function OpenSourcePage() {
   return (

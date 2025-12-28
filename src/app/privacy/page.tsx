@@ -1,6 +1,15 @@
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { Lock, EyeOff, Server, Database } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy - No Data Collection | PromptPilot",
+  description: "PromptPilot does NOT collect your prompts or data. We use local storage and direct browser-to-API communication. Privacy First.",
+  alternates: {
+    canonical: "https://promptpilot.tech/privacy",
+  },
+};
 
 export default function PrivacyPage() {
   return (

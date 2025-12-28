@@ -1,6 +1,15 @@
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { Zap, Layout, Sparkles, Shield, Globe, Cpu, Keyboard, History, Palette, User, FileText, Settings, Users } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Features - Local AI & Gemini API Modes | PromptPilot",
+  description: "Explore PromptPilot's dual-engine architecture. Choose Local AI Mode for 100% privacy with WebGPU, or Gemini API Mode for lightning-fast advanced reasoning.",
+  alternates: {
+    canonical: "https://promptpilot.tech/features",
+  },
+};
 
 export default function FeaturesPage() {
   return (

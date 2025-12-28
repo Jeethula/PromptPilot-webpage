@@ -1,6 +1,15 @@
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { ArrowRight, MessageSquare, Sparkles, FileText, CheckCircle, Cpu, CloudLightning, Shield, Zap, Globe, Layout } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "How PromptPilot Works - Local WebGPU vs Gemini API",
+  description: "See under the hood of PromptPilot. detailed architecture of our Local AI (Gemma-2-2B) and Cloud AI (Gemini Flash Lite) engines.",
+  alternates: {
+    canonical: "https://promptpilot.tech/how-it-works",
+  },
+};
 
 export default function HowItWorksPage() {
   return (
