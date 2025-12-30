@@ -22,6 +22,7 @@ import { Section } from "@/components/ui/Section";
 import { CodeBlock } from "@/components/ui/CodeBlock";
 import type { Metadata } from "next";
 import JsonLd from "@/components/seo/JsonLd";
+import { VideoPlayer } from "@/components/ui/VideoPlayer";
 
 export const metadata: Metadata = {
   title: "PromptPilot | Free AI Prompt Extension & Add-in",
@@ -151,23 +152,10 @@ export default function Home() {
         </div>
         
         <div className="max-w-4xl mx-auto">
-          <div className="aspect-video rounded-2xl overflow-hidden border border-white/10 bg-black/50 relative group cursor-pointer shadow-2xl shadow-purple-500/20">
-            {/* Placeholder Content */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/20 transition-all scale-100 group-hover:scale-110">
-                <Play className="w-8 h-8 text-white fill-white ml-1" />
-              </div>
-            </div>
+          <div className="aspect-video rounded-2xl overflow-hidden border border-white/10 bg-black shadow-2xl shadow-purple-500/20">
+            <VideoPlayer />
             
-            {/* Overlay Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
-            
-            <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between pointer-events-none">
-              <div className="text-white">
-                <h3 className="text-lg font-bold">PromptPilot Demo</h3>
-                <p className="text-gray-400 text-sm">1:24 • Features Walkthrough</p>
-              </div>
-            </div>
+
           </div>
         </div>
       </Section>
