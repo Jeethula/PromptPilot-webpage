@@ -7,16 +7,37 @@ export function VideoPlayer() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Simple lazy load: Wait 2 seconds after component mount
-    // This ensures acceptable LCP/FCP before heavy video fetching starts
     const timer = setTimeout(() => {
       setIsLoaded(true);
     }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    if (!isLoaded || !videoRef.current || !containerRef.current) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            videoRef.current?.play().then(() => setIsPlaying(true)).catch(e => console.log("Autoplay blocked:", e));
+          } else {
+            videoRef.current?.pause();
+            setIsPlaying(false);
+          }
+        });
+      },
+      { threshold: 0.5 } // Play when 50% visible
+    );
+
+    observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  }, [isLoaded]);
 
   const togglePlay = () => {
     if (!videoRef.current) return;
@@ -40,12 +61,14 @@ export function VideoPlayer() {
   }
 
   return (
-    <div className="relative w-full h-full group bg-black rounded-xl overflow-hidden" onClick={togglePlay}>
+    <div ref={containerRef} className="relative w-full h-full group bg-black rounded-xl overflow-hidden" onClick={togglePlay}>
       <video
         ref={videoRef}
         className="w-full h-full object-cover"
         controls={isPlaying} // Only show native controls when playing
         playsInline // Critical for iOS
+        muted // Critical for Autoplay
+        loop
         preload="metadata"
         poster="/logo.png"
         onEnded={() => setIsPlaying(false)}
