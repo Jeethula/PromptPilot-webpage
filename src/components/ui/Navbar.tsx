@@ -83,7 +83,11 @@ export function Navbar() {
             >
               <Github className="w-5 h-5" />
             </Link>
-            <Button size="sm" variant="primary">
+            <Button 
+              size="sm" 
+              variant="primary"
+              href="https://chromewebstore.google.com/detail/ihehefanfcgadehabjdngfkbfebkbphm?utm_source=item-share-cb"
+            >
               Install Extension
             </Button>
           </div>
@@ -123,7 +127,12 @@ export function Navbar() {
               <Github className="w-5 h-5" />
               <span>View on GitHub</span>
             </Link>
-            <Button className="w-full">Install Extension</Button>
+            <Button 
+              className="w-full"
+              href="https://chromewebstore.google.com/detail/ihehefanfcgadehabjdngfkbfebkbphm?utm_source=item-share-cb"
+            >
+              Install Extension
+            </Button>
           </div>
         </div>
       )}

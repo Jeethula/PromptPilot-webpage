@@ -66,7 +66,7 @@ export default function Home() {
             <Button 
               size="lg" 
               rightIcon={<ArrowRight className="w-5 h-5" />}
-              href="https://chrome.google.com/webstore"
+              href="https://chromewebstore.google.com/detail/ihehefanfcgadehabjdngfkbfebkbphm?utm_source=item-share-cb"
             >
               Add to Chrome - Free
             </Button>
@@ -190,7 +190,7 @@ export default function Home() {
             </div>
 
             <div className="pt-8">
-              <Button size="lg" className="w-full md:w-auto" href="https://chrome.google.com/webstore">
+              <Button size="lg" className="w-full md:w-auto" href="https://chromewebstore.google.com/detail/ihehefanfcgadehabjdngfkbfebkbphm?utm_source=item-share-cb">
                 Add to Chrome - Free
               </Button>
             </div>
