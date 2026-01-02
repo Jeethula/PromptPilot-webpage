@@ -121,7 +121,7 @@ export default function StoryPage() {
                <Button 
                   size="lg" 
                   rightIcon={<ArrowRight className="w-5 h-5" />}
-                  href="https://chrome.google.com/webstore"
+                  href="https://chromewebstore.google.com/detail/ihehefanfcgadehabjdngfkbfebkbphm?utm_source=item-share-cb"
                >
                   Get PromptPilot Free
                </Button>
